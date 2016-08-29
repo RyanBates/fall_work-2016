@@ -12,24 +12,27 @@ float boxvertices[] = {
 	0,0,-2,0,
 	0,0,0,1 };
 
-float x = x * boxvertices[00] + y * boxvertices[10] + z * boxvertices[20] + w * boxvertices[30];
-float y = x * boxvertices[01] + y * boxvertices[11] + z * boxvertices[21] + w * boxvertices[31];
-float z = x * boxvertices[02] + y * boxvertices[12] + z * boxvertices[22] + w * boxvertices[32];
-float w = x * boxvertices[03] + y * boxvertices[13] + z * boxvertices[23] + w * boxvertices[33];
+float left[] = { -2,0,0,0 };
+float right[] = { 2,0,0,0 };
 
-float left = x--;
-float right = x++;
-
-float x =  2/ left - right;
+int x =  2/ right[0] - left[0];
 
 void translate()
 {
-	
+	float matrix = boxvertices[15] - x;
+	boxvertices - x;
+	std::cout << boxvertices[00] << " " << boxvertices[01] << " " << boxvertices[02] << " " << boxvertices[03] << std::endl;
+	std::cout << boxvertices[04] << " " << boxvertices[05] << " " << boxvertices[06] << " " << boxvertices[07] << std::endl;
+	std::cout << boxvertices[8] << " " << boxvertices[9] << " " << boxvertices[10] << " " << boxvertices[11] << std::endl;
+	std::cout << boxvertices[12] << " " << boxvertices[13] << " " << boxvertices[14] << " " << boxvertices[15] << std::endl;
+	std::cout << std::endl;
+	std::cout << matrix << std::endl;
+
 }
 
 int main()
 {
-	
+	translate();
 	system("pause");
 	return 0;
 }
