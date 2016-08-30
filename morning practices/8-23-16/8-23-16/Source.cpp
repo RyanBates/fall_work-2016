@@ -7,6 +7,7 @@ this should work for any arbitrary matrix/*/
 int main()
 {
 
+
 	system("puase");
 	return 0;
 }
