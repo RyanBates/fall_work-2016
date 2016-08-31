@@ -3,7 +3,7 @@ store this argument in an array.
 then execute every function in the array*/
 #include <iostream>
 
-int *fun(int a);
+typedef int (*fun)(int a);
 
 int one(int a)
 {
@@ -23,12 +23,17 @@ int div(int a)
 
 int main()
 {
-	*fun num[] = 
+	fun num[] = 
 	{
 		one,
 		multi,
 		div
 	};
+
+	for (int i = 0; i < 3; i++)
+	{
+		std::cout << num[i](90) << std::endl;
+	}
 
 	system("pause");
 	return 0;
