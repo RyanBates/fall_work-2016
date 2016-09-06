@@ -9,6 +9,7 @@ hint: 2 / right - left is x/*/
 
 int main()
 {
+
 	system("pause");
 	return 0;
 }

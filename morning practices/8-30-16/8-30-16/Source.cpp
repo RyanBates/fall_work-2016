@@ -5,7 +5,7 @@ then execute every function in the array*/
 
 typedef int (*fun)(int a);
 
-int one(int a)
+int show(int a)
 {
 	return a; 
 }
@@ -25,7 +25,7 @@ int main()
 {
 	fun num[] = 
 	{
-		one,
+		show,
 		multi,
 		div
 	};
