@@ -5,7 +5,7 @@ Explain why/why not
 */
 #include <iostream>
 
-typedef int(*num)(int a);
+typedef int(*num)(int a, int b);
 
 int add(int a, int b) 
 {
@@ -14,8 +14,14 @@ int add(int a, int b)
 
 void main()
 {
-	num together[] = {
-		add
+	num together[] =
+	{ 
+		add 
 	};
-	std::cout << together[2](19) << std::endl;
+
+	std::cout << together[0](3,15) << std::endl;
+	system("pause");
 }
+/*explaination
+
+*/
